@@ -5,7 +5,7 @@ declare type TestResult = 'PASSED' | 'FAILED' | 'EXCEPTION' | 'WAS_NOT_RUNNING' 
 /**
  * Тест-кейс, который должен задать пользователь
  */
-declare type TestCase = (() => Promise<boolean> | boolean) | undefined;
+declare type TestCase = (() => Promise<boolean> | boolean);
 declare type TestPreparation = (() => Promise<void> | void) | undefined;
 declare type TestCompletion = TestPreparation;
 declare type TestOptions = {

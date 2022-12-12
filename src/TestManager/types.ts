@@ -7,7 +7,7 @@ type TestResult = 'PASSED' | 'FAILED' | 'EXCEPTION' | 'WAS_NOT_RUNNING' |
 /**
  * Тест-кейс, который должен задать пользователь
  */
-type TestCase = (() => Promise<boolean> | boolean) | undefined;
+type TestCase = (() => Promise<boolean> | boolean);
 
 type TestPreparation = (() => Promise<void> | void) | undefined;
 
