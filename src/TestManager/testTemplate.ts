@@ -13,7 +13,7 @@ export default class Test {
     private _caseStartTime: number | undefined;
     private _caseEndTime: number | undefined;
 
-    private _case: TestCase;
+    private _case!: TestCase;
     private _preparation: TestPreparation;
     private _completion: TestCompletion;
 
@@ -72,7 +72,7 @@ export default class Test {
      * Опциональая функция, которая выполнется после
      * выполнением теста
      */
-     set completion(completion: TestCompletion) {
+    set completion(completion: TestCompletion) {
         this._completion = completion;
     }
 

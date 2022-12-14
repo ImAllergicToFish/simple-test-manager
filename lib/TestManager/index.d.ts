@@ -8,6 +8,12 @@ declare class TestManager {
     runAllTests(): Promise<void>;
     runTestsByTag(tag: string): Promise<void>;
     /**
+     * Завершает процесс с exit code:
+     * - 0 если тесты выполнились без ошибок
+     * - 1 если с ошибками
+     */
+    evaluateFinishedTests(): void;
+    /**
      * Возвращает набор тегов тестов (без повторений)
      */
     private get _tags();
